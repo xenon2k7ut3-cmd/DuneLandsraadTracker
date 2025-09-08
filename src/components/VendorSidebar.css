@@ -1,0 +1,122 @@
+.vendor-sidebar {
+  width: 320px;
+}
+
+.vendor-sidebar-inner {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.vendor-sidebar-inner.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+  color: #888;
+  font-style: italic;
+}
+
+.vendor-title {
+  color: #d4af37;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.vendor-image-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.vendor-image-card {
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.vendor-image-label {
+  background: #333;
+  color: #b8b8b8;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+.vendor-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: zoom-in;
+}
+
+.vendor-image.missing {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.vendor-reference {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.vendor-reference:hover {
+  text-decoration: underline;
+}
+
+/* Lightbox */
+.vendor-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 9998;
+}
+
+.vendor-lightbox-overlay.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.vendor-lightbox-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: 8px;
+  background: #111;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.vendor-lightbox-image {
+  display: block;
+  max-width: 88vw;
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  cursor: zoom-out;
+}
+
+@media (max-width: 1200px) {
+  .vendor-sidebar {
+    width: 100%;
+  }
+
+  .vendor-sidebar-inner.empty {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+}
+
+

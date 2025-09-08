@@ -1,0 +1,209 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.app-header {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid #d4af37;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.header-text {
+  text-align: left;
+  flex: 1;
+}
+
+.storage-info {
+  margin-top: 0.5rem;
+}
+
+.storage-info small {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.file-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+  color: #d4af37;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+.header-text p {
+  font-size: 1rem;
+  color: #b8b8b8;
+  margin: 0;
+}
+
+.reset-button {
+  background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+  color: #1a1a1a;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+  white-space: nowrap;
+}
+
+.reset-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+  background: linear-gradient(135deg, #e6c158 0%, #d4af37 100%);
+}
+
+.reset-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.4);
+}
+
+.export-button, .import-button {
+  background: linear-gradient(135deg, #4a7c59 0%, #3a6b49 100%);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(74, 124, 89, 0.4);
+  white-space: nowrap;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.export-button:hover, .import-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 124, 89, 0.6);
+  background: linear-gradient(135deg, #5a8c69 0%, #4a7c59 100%);
+}
+
+.export-button:active, .import-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(74, 124, 89, 0.4);
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .header-text {
+    text-align: center;
+  }
+  
+  .header-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .file-controls {
+    justify-content: center;
+  }
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (min-width: 1200px) {
+  .app-main {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .main-content {
+    flex: 1;
+    max-width: 800px;
+  }
+}
+
+/* GODLIKE Easter Egg Message */
+.godlike-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 
+    0 0 20px #ffd700,
+    0 0 40px #ffd700,
+    0 0 60px #ffd700,
+    0 0 80px #ffd700;
+  z-index: 9999;
+  animation: godlikeAnimation 3s ease-out forwards;
+  pointer-events: none;
+  font-family: 'Arial Black', sans-serif;
+  letter-spacing: 0.2em;
+}
+
+@keyframes godlikeAnimation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    filter: blur(10px);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+    filter: blur(0px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.1);
+    filter: blur(5px);
+  }
+}
