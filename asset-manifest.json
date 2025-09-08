@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/DuneAwakeningLandsraadTracker/static/css/main.6d679d5d.css",
-    "main.js": "/DuneAwakeningLandsraadTracker/static/js/main.a7eb2adc.js",
-    "index.html": "/DuneAwakeningLandsraadTracker/index.html",
-    "main.6d679d5d.css.map": "/DuneAwakeningLandsraadTracker/static/css/main.6d679d5d.css.map",
-    "main.a7eb2adc.js.map": "/DuneAwakeningLandsraadTracker/static/js/main.a7eb2adc.js.map"
+    "main.css": "/DuneLandsraadTracker/static/css/main.6d679d5d.css",
+    "main.js": "/DuneLandsraadTracker/static/js/main.9218e36f.js",
+    "index.html": "/DuneLandsraadTracker/index.html",
+    "main.6d679d5d.css.map": "/DuneLandsraadTracker/static/css/main.6d679d5d.css.map",
+    "main.9218e36f.js.map": "/DuneLandsraadTracker/static/js/main.9218e36f.js.map"
   },
   "entrypoints": [
     "static/css/main.6d679d5d.css",
-    "static/js/main.a7eb2adc.js"
+    "static/js/main.9218e36f.js"
   ]
 }
